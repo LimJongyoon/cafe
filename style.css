@@ -149,6 +149,7 @@ header {
 #suggestions {
     list-style: none;
     padding: 0;
+    margin-top: -3%;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: var(--box-radius);
