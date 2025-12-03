@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>카페 레시피 검색</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<body>
+
+  <header>
+    <h1>카페 레시피 검색</h1>
+  </header>
+
+  <div class="container">
+
+    <button id="toggleMode">🌙 / ☀️</button>
+
+    <input id="search" type="text" placeholder="메뉴 검색…">
+
+    <div class="buttons">
+      <button id="btn-hot">HOT</button>
+      <button id="btn-ice">ICE</button>
+    </div>
+
+    <ul id="suggestions"></ul>
+
+    <div class="recipe-section">
+      
+      <div class="recipe-box box1-container" id="box1-container">
+        <div class="box-title">1</div>
+        <div id="box1"></div>
+      </div>
+
+      <div class="recipe-box box2-container" id="box2-container">
+        <div class="box-title">2</div>
+        <div id="box2"></div>
+      </div>
+
+      <div class="recipe-box box3-container" id="box3-container">
+        <div class="box-title">3</div>
+        <div id="box3"></div>
+      </div>
+    <div id="qrShare" class="qr-share">
+    <h2>QR</h2>
+    <div id="qrCanvas"></div>
+    <p>이 사이트를 공유하세요</p>
+    </div>
+    </div>
+
+  </div>
+
+  <!-- 메인 스크립트 -->
+  <script src="app.js"></script>
+
+</body>
+</html>

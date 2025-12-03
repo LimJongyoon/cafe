@@ -1,0 +1,307 @@
+/* --------------------------------
+   기본 설정 + 폰트
+-----------------------------------*/
+:root {
+    --green-main: #323232;
+    --green-soft: #4f4f4f;
+    --cream-bg: #F8F6F2;
+    --wood: #C49A6C;
+    --wood-dark: #2e2e2e;
+    --accent-red: #D62828;
+
+    --hot-color: #FF8A8A;
+    /* 파스텔 레드 */
+    --ice-color: #81C7F5;
+    /* 파스텔 블루 */
+
+    --box-radius: 14px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 다크모드 변수 */
+.dark {
+    --cream-bg: #282828;
+    --green-main: #f4f4f4;
+    --green-soft: #1d1d1d;
+    --wood: #E5C095;
+    --wood-dark: #C29E6E;
+    --shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+body {
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    background: var(--cream-bg);
+    margin: 0;
+    padding: 0;
+    color: var(--green-main);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* --------------------------------
+   헤더
+-----------------------------------*/
+header {
+    background: var(--green-main);
+    color: #fff;
+    padding: 22px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+/* 다크/라이트 스위치 */
+#toggleMode {
+    position: absolute;
+    right: 18px;
+    top: 8%;
+    transform: translateY(-50%);
+    background: #a5a5a588;
+    border: 1px solid #8a8a8a55;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+}
+
+/* --------------------------------
+   메인 컨테이너
+-----------------------------------*/
+.container {
+    padding: 22px;
+    margin: auto;
+    max-width: 860px;
+}
+
+/* --------------------------------
+   검색창 + 버튼
+-----------------------------------*/
+#search {
+    width: 95%;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: var(--box-radius);
+    border: 1px solid var(--green-soft);
+    background: #ffffff;
+    color: #333;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.dark #search {
+    background: #353535;
+    border-color: var(--green-main);
+    color: #fff;
+}
+
+/* HOT/ICE 버튼 */
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 14px 0;
+    font-size: 17px;
+    border-radius: var(--box-radius);
+    border: none;
+    background: #eee;
+    color: #555;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: 0.15s;
+}
+
+.buttons button.active-hot {
+    background: var(--hot-color);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.buttons button.active-ice {
+    background: var(--ice-color);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.dark .buttons button {
+    background: #3d4140;
+    color: #ddd;
+}
+
+/* --------------------------------
+   자동완성
+-----------------------------------*/
+#suggestions {
+    list-style: none;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: var(--box-radius);
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
+    display: none;
+}
+
+.dark #suggestions {
+    background: #343837;
+}
+
+#suggestions li {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-size: 17px;
+    color: #333;
+}
+
+.dark #suggestions li {
+    color: #fff;
+}
+
+#suggestions li:hover {
+    background: #f3f3f3;
+}
+
+/* --------------------------------
+   레시피 박스
+-----------------------------------*/
+.recipe-section {
+    margin-top: 24px;
+    display: grid;
+    gap: 18px;
+}
+
+/* 기본 박스 */
+.recipe-box {
+    padding: 16px 18px;
+    border-radius: var(--box-radius);
+    box-shadow: var(--shadow);
+    background: #fff;
+    border-left: 6px solid var(--wood);
+    transition: 0.3s ease;
+    display: none;
+    /* 검색 전 숨김 */
+}
+
+/* 테마별 박스 */
+.box1 {
+    background: #FFF8F0;
+    border-left-color: #E3AA6F;
+}
+
+.box2 {
+    background: #F1F8FF;
+    border-left-color: #8FC3E6;
+}
+
+.box3 {
+    background: #F2FFF6;
+    border-left-color: #8AD9A4;
+}
+
+.dark .box1 {
+    background: #2B4A42;
+}
+
+.dark .box2 {
+    background: #28445A;
+}
+
+.dark .box3 {
+    background: #204734;
+}
+
+.box-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--green-main);
+}
+
+/* 재료 줄 */
+.ingredient-row {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.ingredient-row:last-child {
+    border-bottom: none;
+}
+
+.num {
+    color: var(--accent-red);
+    font-weight: 700;
+}
+
+.qr-share {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: var(--box-radius);
+    background: #fff;
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--wood);
+}
+
+.dark .qr-share {
+    background: #3a423f;
+    border-left-color: var(--wood-dark);
+}
+
+.qr-share h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: var(--green-main);
+}
+
+.qr-share p {
+    margin-top: 16px;
+    font-size: 15px;
+    /*margin: 0 auto;*/
+    color: var(--green-main);
+}
+#qrCanvas {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#qrCanvas canvas {
+    width: 180px !important;
+    height: 180px !important;
+}
+
+
+
+
+/* 반응형 */
+@media (min-width: 768px) {
+    .recipe-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #box3-container {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .recipe-section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #box3-container {
+        grid-column: auto;
+    }
+}
