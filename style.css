@@ -53,7 +53,7 @@ header {
     letter-spacing: 0.5px;
     box-shadow: var(--shadow);
     position: relative;
-    height: 38px;          /* 고정 높이로 줄임 */
+    height: 25px;          /* 고정 높이로 줄임 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +63,7 @@ header {
 #toggleMode {
     position: absolute;
     right: 10px;          /* 오른쪽 여백 감소 */
-    top: 3%;
+    top: 2%;
     transform: translateY(-50%);
     background: #00000033;
     border: 1px solid #ffffff22;
@@ -89,7 +89,7 @@ header {
    검색창 + 버튼
 -----------------------------------*/
 #search {
-    width: 95%;
+    width: 92%;
     padding: 16px;
     font-size: 18px;
     border-radius: var(--box-radius);
