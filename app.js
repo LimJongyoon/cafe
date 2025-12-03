@@ -185,3 +185,6 @@ function generateQR() {
 
 generateQR();
 
+searchInput.addEventListener("focus", () => {
+  searchInput.value = "";     // 검색창 비우기
+});
