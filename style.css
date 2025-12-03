@@ -40,33 +40,41 @@ body {
 /* --------------------------------
    헤더
 -----------------------------------*/
+/* --------------------------------
+   헤더 최소화 버전
+-----------------------------------*/
 header {
     background: var(--green-main);
     color: #fff;
-    padding: 22px;
+    padding: 6px 0;        /* 패딩 10px → 6px로 감소 */
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;       /* 글씨 아주 조금 크게 (가독 유지) */
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     box-shadow: var(--shadow);
     position: relative;
+    height: 38px;          /* 고정 높이로 줄임 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 다크/라이트 스위치 */
+/* 다크/라이트 스위치 — 헤더 안에서 공간 최소화 */
 #toggleMode {
     position: absolute;
-    right: 18px;
-    top: 8%;
+    right: 10px;          /* 오른쪽 여백 감소 */
+    top: 3%;
     transform: translateY(-50%);
-    background: #a5a5a588;
-    border: 1px solid #8a8a8a55;
+    background: #00000033;
+    border: 1px solid #ffffff22;
     color: #fff;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 4px 10px;    /* 패딩 8px→4px */
+    border-radius: 16px;
+    font-size: 12px;      /* 14px→12px */
     cursor: pointer;
     backdrop-filter: blur(4px);
 }
+
 
 /* --------------------------------
    메인 컨테이너
